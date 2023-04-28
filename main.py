@@ -50,16 +50,22 @@ def go(config: DictConfig):
             )
 
         if "basic_cleaning" in active_steps:
-            ##################
-            # Implement here #
-            ##################
-            pass
+            _ = mlflow.run(
+            os.path.join(root_path, "src/basic_cleaning"),
+            "main",
+            parameters={
+                "input_artifact": "sample.csv:latest",
+                "artifact_name": "clean_data.csv",
+                "artifact_type": "clean_data",
+                "artifact_description": "Data with basic cleaningapplied"
+            },
+        )
 
         if "data_check" in active_steps:
             ##################
             # Implement here #
             ##################
-            pass
+            pass            
 
         if "data_split" in active_steps:
             ##################
