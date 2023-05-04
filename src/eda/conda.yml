@@ -5,12 +5,13 @@ channels:
 dependencies:
   - python=3.8 
   - numpy=1.23.4
-  - protobuf=3.20.0
-  - jupyterlab=3.0.12
+  - jupyter=1.0.0
   - seaborn=0.11.1
   - pandas=1.2.3
   - pip=20.3.3
-  - pandas-profiling=2.11.0
+  - pandas-profiling=3.2.0
+  - ipywidgets=7.6.3
   - pyarrow=2.0
   - pip:
       - wandb==0.13.3
+      - protobuf==3.20.*
